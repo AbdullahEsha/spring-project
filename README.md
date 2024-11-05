@@ -9,7 +9,9 @@ To install the project, follow these steps:
 
 ## Step by Step Process
 
-## At First innitialize the Go to this link https://start.spring.io/ and select Spring `Starter Web`, `Spring security`, `MySQL Driver`, `Spring Session` and `Thymeleaf` all dependencies and download the zip file.
+## At First innitialize the Go to this link https://start.spring.io/
+
+and select Spring `Starter Web`, `Spring security`, `MySQL Driver`, `Spring Session` and `Thymeleaf` all dependencies and download the zip file.
 
 - Set up the db connection using username, password and url `\src\main\resources\application.properties` in that location.
 
@@ -35,7 +37,9 @@ To install the project, follow these steps:
 
     - Loads users via a custom `UserDetailsService` and uses BCrypt for password verification.
 
-## For `src\main\java\net\enjoy\springboot\registrationlogin\controller\AuthController.java`, The `AuthController` class in a Spring Boot application manages user-related actions:
+## `src\main\java\net\enjoy\springboot\registrationlogin\controller\AuthController.java`
+
+The `AuthController` class in a Spring Boot application manages user-related actions:
 
 1.  **Home Page**: `@GetMapping("/index")` renders the home page.
 2.  **User Registration**:
@@ -47,7 +51,9 @@ To install the project, follow these steps:
 4.  **Forgot Password**: `@GetMapping("/forgot-password")` shows the password recovery page.
 5.  **Login**: `@GetMapping("/login")` renders the login page.
 
-## For `src\main\java\net\enjoy\springboot\registrationlogin\dto\UserDto.java`, The `UserDto` class is a Data Transfer Object (DTO) used in a Spring Boot application for transferring user data between layers. It leverages Lombok annotations to simplify code by automatically generating getters, setters, constructors, and more.
+## `src\main\java\net\enjoy\springboot\registrationlogin\dto\UserDto.java`,
+
+The `UserDto` class is a Data Transfer Object (DTO) used in a Spring Boot application for transferring user data between layers. It leverages Lombok annotations to simplify code by automatically generating getters, setters, constructors, and more.
 
 \*\* Fields
 
@@ -63,7 +69,9 @@ To install the project, follow these steps:
 - `@NotEmpty`: Ensures certain fields (e.g., `firstName`, `lastName`, `email`, and `password`) are not left blank.
 - `@Email`: Validates that `email` has a correct email format.
 
-## For `src\main\java\net\enjoy\springboot\registrationlogin\entity\User.java`, The `User` class represents a user entity in a Spring Boot application and is mapped to the `users` database table.
+## `src\main\java\net\enjoy\springboot\registrationlogin\entity\User.java`
+
+The `User` class represents a user entity in a Spring Boot application and is mapped to the `users` database table.
 
 \*\* Fields
 
@@ -81,7 +89,9 @@ To install the project, follow these steps:
 ** `@Entity` and `@Table`: Define the class as a JPA entity associated with the `users` table.
 ** `@ManyToMany`: Specifies the many-to-many relationship with the `Role` class.
 
-## For `src\main\java\net\enjoy\springboot\registrationlogin\security\CustomUserDetailsService.java`, The `CustomUserDetailsService` class is a custom implementation of `UserDetailsService` for integrating Spring Security with the application's user data.
+## `src\main\java\net\enjoy\springboot\registrationlogin\security\CustomUserDetailsService.java`
+
+The `CustomUserDetailsService` class is a custom implementation of `UserDetailsService` for integrating Spring Security with the application's user data.
 
 \*\* Purpose
 
@@ -96,7 +106,9 @@ This service loads user-specific data from the database for authentication. It u
 
 - **@Service**: Marks this class as a service component in Spring, allowing it to be autowired where needed.
 
-## For `src\main\java\net\enjoy\springboot\registrationlogin\RegistrationLoginApplication.java`, The `RegistrationLoginApplication` class is the main entry point for the Spring Boot application.
+## `src\main\java\net\enjoy\springboot\registrationlogin\RegistrationLoginApplication.java`
+
+The `RegistrationLoginApplication` class is the main entry point for the Spring Boot application.
 
 \*\* Key Components
 
